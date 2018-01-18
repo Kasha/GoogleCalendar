@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Import Events</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" 	href="flashicon.png" />
+    <link rel="icon" type="image/png" href="flashicon.png" />
+    <!-- For Nokia -->
+    <link rel="shortcut icon" href="flashicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+    <link href="css/reminiGC.css" rel="stylesheet">  
+    <script src="js/ReminiGC.js"></script>
+    <script src="js/Settings.js"></script>
+    <script src="css/bootstrap-select.css"></script>
+    <script src="js/bootstrap-select.js"></script>
+</head>
+  <body>
+       <div class="container">      
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Import Events</h2>
+                <div class="row">
+                        <div class="col-sm-1">
+                            <button id="authorize-button" class="btn btn-primary" style="display: none;">Authorize</button>
+                            <button id="signout-button" class="btn btn-primary" style="display: none;">Sign Out</button>
+                        </div>
+                        <div class="col-sm-1"><button id="import-button" class="btn btn-primary disabled" onclick="g_oReminiEventsManager.importEvents();">Import</button></div>
+                </div>
+            </div>
+            
+            <div class="panel-body">
+                <div id="display-json"></div>
+                <div id="display-event-json"></div>
+                <div class="row">
+                    <div class="col-xs-6 eventsListCol">
+                        
+                        <div class="well" style="overflow: auto;">
+                            <h4>Calendar List</h4>
+                            <div id="idCalendarDiv">
+                            </div>
+                            <h4>Upcoming Events</h4>
+                            <ul class="list-group checked-list-box eventsList">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="panel-footer"><a href="http://remini.me" target="_Remini">Remini 2018</a></div>
+        </div>
+       </div>
+    
+          <script src="js/GoogleCalendar.js"></script>
+          <script async defer src="https://apis.google.com/js/api.js"
+              onload="this.onload=function(){};handleClientLoad()"
+              onreadystatechange="if (this.readyState === 'complete') this.onload()">
+          </script>
+
+  </body>
+</html>
